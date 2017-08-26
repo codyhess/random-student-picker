@@ -55,11 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students[Math.floor(Math.random() * students.length)];
+  var rand2 = students[Math.floor(Math.random() * students.length)];
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      choice.innerText = rand;
+      choice.innerText = rand + ", " + rand2;
       return;
     }
     if (colors[cur]) header.style.color = colors[cur];
